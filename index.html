@@ -1,0 +1,33 @@
+<html>
+
+<head>
+    <title>U21</title>
+    <link type="text/css" href="main.css" rel="stylesheet">
+</head>
+
+    
+<body>
+    <canvas id="myChart" width="200" height="90"></canvas>
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.bundle.min.js"></script>
+    <script src="main.js"></script>
+    
+    
+    <p>Age: </p><input id="age">
+    <form action="">
+        <input type="radio" name="risk" value="0.04"> Low<br>
+        <input type="radio" name="risk" value="0.06"> Medium<br>
+        <input type="radio" name="risk" value="0.08"> High
+    </form>
+    <p>Monthly Investment:</p><input id="MonthlyInvestment">
+    <p>Target Net Worth: </p><input id="TargetNetWorth">
+    <br>
+    <button id="calc" onclick="calc()">Calculate</button>
+    
+
+    
+</body>
+    
+</html>
