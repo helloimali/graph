@@ -41,7 +41,7 @@ datasets: [
     options: {
         scales: {
             yAxes: [{
-                stacked: true,
+                stacked: false,
                 ticks: {
                     beginAtZero:true
                     
