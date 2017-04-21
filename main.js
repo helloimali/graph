@@ -41,7 +41,7 @@ datasets: [
     options: {
         scales: {
             yAxes: [{
-                stacked: true,
+                stacked: false,
                 ticks: {
                     beginAtZero:true
                     
@@ -65,10 +65,12 @@ function calc() {
     //Update Vars
     
     age = document.getElementById("age").value;
+    Rage = document.getElementById("Rage").value;
     MI = document.getElementById("MonthlyInvestment").value;
     Target = document.getElementById("TargetNetWorth").value;
     risky = document.getElementsByName("risk");
-    
+
+
     for (var i = 0, length = 4; i < length; i++) {
     if (risky[i].checked) {
         risky = risky[i].value;
@@ -77,6 +79,14 @@ function calc() {
         }
     }
 
+    if(Rage <= age){
+        alert("The time you wish to retire has already passed!");
+        console.log(Rage);
+        console.log("is is less then");
+        console.log(age);
+        throw new Error('Rage <= age');
+    }
+    
     console.log("Risk: asdasdas: " + risky);
 
     var addition = MI;
@@ -87,7 +97,7 @@ function calc() {
     //Calculations
     
         //X axis
-    var maxAge = parseInt(age) + 30;
+    var maxAge = Rage;
     
     var axisX = [];
 
@@ -110,7 +120,7 @@ function calc() {
     console.log(MI);
     console.log(addition);
     
-    for(i=0; i<30; i++){
+    for(i=0; i<Rage; i++){
         add.push(add[i]*1.03);
          console.log(add[i]);
     }
@@ -122,7 +132,7 @@ function calc() {
     var investment = [];
     investment.push(0);
     
-    for(i=0; i<29; i++){
+    for(i=0; i<Rage; i++){
         console.log("Investment: " + parseInt(investment[i]));
         console.log("Invest * Risk: " + parseInt((investment[i] * risky)));
         console.log("add: " + parseInt(add[i]));
@@ -144,13 +154,15 @@ function calc() {
     
     
     //Chart Implementations
+    myChart.data.labels = axisX;
     
-    for(i=0; i<30; i++){
+    for(i=0; i<Rage; i++){
         myChart.data.datasets[0].data[i] = Target;
     }
     
-    for(i=0; i<30; i++){        
+    for(i=0; i<Rage; i++){        
         myChart.data.datasets[1].data[i] = investment[i]; 
+       
         myChart.update();
         
     }
