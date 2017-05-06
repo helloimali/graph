@@ -64,8 +64,8 @@ Then the graph apperers with sliders showing Age, Risk, Monthly Investment, and 
 function calc() {
     //Update Vars
     
-    age = document.getElementById("age").value;
-    Rage = document.getElementById("Rage").value;
+    age = Number(document.getElementById("age").value);
+    Rage = Number(document.getElementById("Rage").value);
     MI = document.getElementById("MonthlyInvestment").value;
     Target = document.getElementById("TargetNetWorth").value;
     risky = document.getElementsByName("risk");
@@ -81,9 +81,6 @@ function calc() {
 
     if(Rage <= age){
         alert("The time you wish to retire has already passed!");
-        console.log(Rage);
-        console.log("is is less then");
-        console.log(age);
         throw new Error('Rage <= age');
     }
     
