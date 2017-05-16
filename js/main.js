@@ -59,9 +59,30 @@ Then there is  loading screen showing success stories
 Then the graph apperers with sliders showing Age, Risk, Monthly Investment, and Target Net Worth.
 */
     
+function back(){
+    $(".page4").fadeToggle(2000);
+    $(".page2").delay(3000).fadeToggle(1200);
+}
+    
+function load(){
+    ranNum = Math.floor(Math.random() * 2) + 1;
+     $(".page2").fadeToggle(2000);
+    if(ranNum == 1){
+        $(".one").delay(3000).fadeToggle(1200);
+         $(".one").delay(3000).fadeToggle(1200);
+    }
+    else{
+        $(".two").delay(3000).fadeToggle(1200);
+        $(".two").delay(3000).fadeToggle(1200);
+    }
+
+    $(".page4").delay(9000).fadeToggle(2000);
+}
+
+function calc() {
+    
 
     
-function calc() {
     //Update Vars
     
     age = Number(document.getElementById("age").value);
@@ -70,14 +91,6 @@ function calc() {
     Target = document.getElementById("TargetNetWorth").value;
     risky = document.getElementsByName("risk");
 
-
-    for (var i = 0, length = 4; i < length; i++) {
-    if (risky[i].checked) {
-        risky = risky[i].value;
-        break;
-        // risk calc.
-        }
-    }
 
     if(Rage <= age){
         alert("The time you wish to retire has already passed!");
@@ -90,7 +103,7 @@ function calc() {
     
     //^Update Vars^
     
-    
+    load();
     //Calculations
     
         //X axis
