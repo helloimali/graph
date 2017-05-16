@@ -1,3 +1,17 @@
+        
+    $(document).ready(
+        function() {
+    
+    $(".page4").fadeToggle(0.000001);
+    $(".dreamfade").fadeToggle(1500);
+    $(".dreamfade").delay(1000).fadeToggle(1000);
+    //Takes care of the intro fade
+        
+    $(".page2").delay(4000).fadeToggle(1000);
+    // now boxes are visable
+        
+	});
+
     var age = 2;
     var MI = 0;
     var Target = 10; 
@@ -60,23 +74,23 @@ Then the graph apperers with sliders showing Age, Risk, Monthly Investment, and 
 */
     
 function back(){
-    $(".page4").fadeToggle(2000);
-    $(".page2").delay(3000).fadeToggle(1200);
+    $(".page4").fadeToggle(1000);
+    $(".page2").delay(2000).fadeToggle(1200);
 }
     
 function load(){
     ranNum = Math.floor(Math.random() * 2) + 1;
      $(".page2").fadeToggle(2000);
     if(ranNum == 1){
-        $(".one").delay(3000).fadeToggle(1200);
+        $(".one").delay(2000).fadeToggle(1200);
          $(".one").delay(3000).fadeToggle(1200);
     }
     else{
-        $(".two").delay(3000).fadeToggle(1200);
+        $(".two").delay(2000).fadeToggle(1200);
         $(".two").delay(3000).fadeToggle(1200);
     }
 
-    $(".page4").delay(9000).fadeToggle(2000);
+    $(".page4").delay(8000).fadeToggle(1000);
 }
 
 function calc() {
@@ -90,15 +104,15 @@ function calc() {
     MI = document.getElementById("MonthlyInvestment").value;
     Target = document.getElementById("TargetNetWorth").value;
     risky = document.getElementsByName("risk");
-
-
-    if(Rage <= age){
-        alert("The time you wish to retire has already passed!");
-        throw new Error('Rage <= age');
-    }
     
     if(age<=0||Rage<=0||MI<=0||Target<=0||risky<=0){
         alert("Please make sure all the numbers are filled in and positive!");
+        throw new Error('Rage <= age');
+    }
+    
+    
+    if(Rage <= age){
+        alert("The time you wish to retire has already passed!");
         throw new Error('Rage <= age');
     }
     
