@@ -3,6 +3,7 @@
 <head>
     <title>ConCap Graph</title>
     <link type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link type="text/css" href="graph.css" rel="stylesheet">
 </head>
 
     
@@ -14,7 +15,7 @@
     <div class="page2 container">
     
     <h1>Dream Calculator</h1>
-    <p>Current Age: </p><input class="form-control" id="age">
+    <p>Current Age: </p><input class="form-control" id="age"><br>
     <p>Retirement Age: </p><input class="form-control" id="Rage">
     <form action="">
         <br><p>Risk:</p>
@@ -22,11 +23,10 @@
         <input type="radio" name="risk" value="0.06"> <span>Medium</span><br>
         <input type="radio" name="risk" value="0.08"> <span>High</span>
     </form>
-    <p>Monthly Investment:</p><input class="form-control" id="MonthlyInvestment">
+    <p>Monthly Investment:</p><input class="form-control" id="MonthlyInvestment"><br>
     <p>Target Net Worth: </p><input class="form-control" id="TargetNetWorth">
     <br>
-    <br>
-    <br>
+
     <button class="btn btn-default" id="calc" onclick="calc()">Calculate</button>
     </div>
     
@@ -35,123 +35,32 @@
         <img src="img/1.jpg">
         <p>Sam Choi</p>
         <blockquote>"With Con Cap I was able to pursue my dreams to become a photographer because I was able to retire at 42"</blockquote>
+        <br> <h6>Loading...</h6>
     </div>
     <div class="two container">
         <img src="img/2.jpg">
         <p>Michael Akolisa</p>
         <blockquote>"VJ set me on a track so that I could support my kids and wife while getting my degree"</blockquote>
+        <br> <h6>Loading...</h6>
     </div>
 
       
     
-    <div class="page4">
+    <div class="page4 container">
         <canvas id="myChart" width="200" height="90"></canvas>
+        <br>
         <button class="btn btn-default" id="calc" onclick="back()">Return</button>
         
     </div>
     
     
-    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="js/Chart.min.js"></script>
     <script src="js/Chart.bundle.min.js"></script>
     <script src="js/main.js"></script>
-    
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="js/particles.min.js"></script>
     <script src="js/particles-dot.js"></script>
     
-    <script>
-        
-    $(document).ready(
-        function() {
-    
-    $(".page4").fadeToggle(0.000001);
-    $(".dreamfade").fadeToggle(2000);
-    $(".dreamfade").delay(3000).fadeToggle(1200);
-    //Takes care of the intro fade
-        
-    $(".page2").delay(6000).fadeToggle(2000);
-    // now boxes are visable
-        
-	});
-        
-        
-    
-    </script>
-    
-    <style>
-        img{
-            height: 400px;
-            border-radius: 10%;
-        }
-        blockquote{
-            color: white;
-        }
-        body{
-            background-color: #232741;
-        }
-        .one, .two{
-            display: none;
-            text-align: center;
-            position: relative;
-            top: 20%;
-            font-size: 100px;
-        }
-        
-        h1,h2,h3,h4,h5,h6,p,span{
-            color: white;
-        }
-        .dreamfade{
-            display:none;
-            text-align: center;
-            
-            position: relative;
-            top: 40%;
-            font-size: 100px;
-        }
-        
-        .page2{
-            display: none;
-            position: relative;
-            top: 10%;    
-        }
-        #particles-js{
-            background-color: #232741;
-            z-index: -1;
-            position: fixed;
-            height:100%;
-            width:100%;
-        }
-        
-
-        .page4{
- 
-        }
-        
-        input{
-
-            background-color: rgba(255,255,255,0.7);
-
-            -webkit-transition: all 0.5s ease;
-        -moz-transition: all 0.5s ease;
-        -ms-transition: all 0.5s ease;
-        -o-transition: all 0.5s ease;
-        transition: all 0.5s ease;
-        }
-
-        input:focus{
-            background-color: rgba(255,255,255,0.9);
-        -webkit-transition: all 0.5s ease;
-        -moz-transition: all 0.5s ease;
-        -ms-transition: all 0.5s ease;
-        -o-transition: all 0.5s ease;
-        transition: all 0.5s ease;
-
-        }
-        
-    </style>
     
 </body>
-    
 </html>
