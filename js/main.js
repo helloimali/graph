@@ -3,7 +3,7 @@
     var Target = 10; 
     var risky = 0 ;
     
-    var  X = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+    var  X = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29"];
     var Y = {};
     
     var ctx = document.getElementById("myChart");
@@ -32,7 +32,7 @@ datasets: [
             pointBorderColor: "#fff",
             pointHoverBackgroundColor: "#fff",
             pointHoverBorderColor: "rgba(255,99,132,1)",
-            data: [0, 59, 90, 81, 56, 55, 40]
+            data: [5, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150, 160, 170, 180, 190, 200, 210, 220, 230, 240, 250, 260, 270, 280, 290]
         }
     ]
         
@@ -97,6 +97,11 @@ function calc() {
         throw new Error('Rage <= age');
     }
     
+    if(age<=0||Rage<=0||MI<=0||Target<=0||risky<=0){
+        alert("Please make sure all the numbers are filled in and positive!");
+        throw new Error('Rage <= age');
+    }
+    
     console.log("Risk: asdasdas: " + risky);
 
     var addition = MI;
@@ -104,6 +109,15 @@ function calc() {
     //^Update Vars^
     
     load();
+    
+    for (var i = 0, length = 4; i < length; i++) {		
+        if (risky[i].checked) {		
+        risky = risky[i].value;		
+        break;		
+        // risk calc.		
+        }		
+    }
+ 
     //Calculations
     
         //X axis
