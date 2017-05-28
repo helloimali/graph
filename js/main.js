@@ -16,7 +16,8 @@
     var MI = 0;
     var Target = 10; 
     var risky = 0 ;
-    
+    var goal = 1;
+
     var  X = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29"];
     var Y = {};
     
@@ -104,6 +105,7 @@ function calc() {
     MI = document.getElementById("MonthlyInvestment").value;
     Target = document.getElementById("TargetNetWorth").value;
     risky = document.getElementsByName("risk");
+    goal= document.getElementsByName("goal");
     
     if(age<=0||Rage<=0||MI<=0||Target<=0||risky<=0){
         alert("Please make sure all the numbers are filled in and positive!");
@@ -207,7 +209,31 @@ function calc() {
 
     
     //^Chart Implementations^
+       
+    //background change
+
+    for (var i = 0, length = 4; i < length; i++) {		
+        if (goal[i].checked) {		
+        goal = goal[i].value;		
+        break;		
+        // risk calc.		
+        }		
+    }
+    
+    if(goal== 1){
+        document.getElementById("graphBack").style.background = "url('img/goal1O.png') center";
         
+    }
+    if(goal== 2){
+        document.getElementById("graphBack").style.background = "url('img/goal2O.png') center";
+                }
+    if(goal== 3){
+        document.getElementById("graphBack").style.background = "url('img/goal3O.png') center";
+    }
+    
+        
+    
+    //^^background change
 
     
 }

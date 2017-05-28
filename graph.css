@@ -1,4 +1,4 @@
-        img{
+        .ad{
             height: 400px;
             border-radius: 10%;
         }
@@ -77,3 +77,8 @@
         transition: all 0.5s ease;
 
         }
+
+.goal{
+    height: 110px;
+    padding: 10px;
+}
