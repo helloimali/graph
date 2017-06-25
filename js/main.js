@@ -3,14 +3,16 @@
         function() {
     
     $(".page4").fadeToggle(0.000001);
-    $(".dreamfade").fadeToggle(1500);
-    $(".dreamfade").delay(1000).fadeToggle(1000);
+  
+
     //Takes care of the intro fade
         
-    $(".page2").delay(4000).fadeToggle(1000);
+    $(".page2").delay(500).fadeToggle(1000);
     // now boxes are visable
         
 	});
+
+
 
     var age = 2;
     var MI = 0;
@@ -92,6 +94,7 @@ function load(){
     }
 
     $(".page4").delay(8000).fadeToggle(1000);
+    
 }
 
 function calc() {
