@@ -98,9 +98,7 @@ function load(){
 }
 
 function calc() {
-    
 
-    
     //Update Vars
     
     age = Number(document.getElementById("age").value);
@@ -127,7 +125,7 @@ function calc() {
     
     //^Update Vars^
     
-    load();
+    
     
     for (var i = 0, length = 4; i < length; i++) {		
         if (risky[i].checked) {		
@@ -186,7 +184,7 @@ function calc() {
 
     }
     
-        //Investment (Yaxis points)^
+    //Investment (Yaxis points)^
     
     // At this point, We need to use "axisX[]" for the X values (age)
     // and investment[] for the Y values
@@ -238,5 +236,21 @@ function calc() {
     
     //^^background change
 
+    myChart.update();
     
 }
+
+function buttonA(){
+    calc();
+    load();
+    console.log("a");
+    
+}
+
+function buttonB(){
+    calc();
+    
+    console.log("b");
+    myChart.update();
+}
+
