@@ -97,22 +97,28 @@ function load(){
     
 }
 
+function togglePage2(){
+    $(".page2").delay(6000).fadeToggle(2000);
+}
 function calc() {
 
     //Update Vars
-    
-    age = Number(document.getElementById("age").value);
+
+   // age = Number(document.getElementById("age").value);
+    age = 0;
     Rage = Number(document.getElementById("Rage").value);
     MI = document.getElementById("MonthlyInvestment").value;
     Target = document.getElementById("TargetNetWorth").value;
     risky = document.getElementsByName("risk");
     goal= document.getElementsByName("goal");
     
-    if(age<=0||Rage<=0||MI<=0||Target<=0||risky<=0){
+    if(Rage<=0||MI<=0||risky<=0){
         alert("Please make sure all the numbers are filled in and positive!");
         throw new Error('Rage <= age');
     }
-    
+    if(Target <= 0){
+        Target = 100000;
+    }
     
     if(Rage <= age){
         alert("The time you wish to retire has already passed!");
@@ -240,16 +246,20 @@ function calc() {
     
 }
 
+var x = 0;
 function buttonA(){
     calc();
+    if(x == 0){
     load();
     console.log("a");
+        x =1;
+        togglePage2();
+    }
     
 }
 
 function buttonB(){
     calc();
-    
     console.log("b");
     myChart.update();
 }
