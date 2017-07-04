@@ -10,15 +10,68 @@
     
 <body>
 <div id="particles-js"></div>
+ 
 
+    <div class="one container">
+        <div class="row">
+            <div class="col-md-6"><img class="ad" src="img/1.jpg"></div>
+            <div class="col-md-6">  <p>Sam Choi</p>
+        <blockquote><p>"With Con Cap I was able to pursue my dreams to become a photographer because I was able to retire at 42"</p></blockquote>
+        </div>
+        </div>
+        <br><center> <h6>Loading...</h6></center>
+    </div>
+    
+    <div class="two container">
+        <div class="row">
+            <div class="col-md-6"><img class="ad" src="img/2.jpg"></div>
+            <div class="col-md-6">  <p>Michael Akolisa</p>
+       
+        <blockquote><p>"VJ set me on a track so that I could support my kids and wife while getting my degree"</p></blockquote>
+        </div>
+        </div>
+        <br><center> <h6>Loading...</h6></center>
+    </div>
+
+      
+    
+    <div id="graphBack" class="page4 page4id">
+        <div>
+        <canvas id="myChart" width="200" height="90"></canvas>
+        </div>
+        <br>
+       <!-- <button class="btn btn-default" id="calc" onclick="back()">Return</button> -->
+
+    </div>
+
+    <div class="page4 container">
+    
+    <br>
+    <div id="page4menu">
+        <div class="text-center">
+                <h1 id="asideEachMonth"></h1>
+                <h1 id="howManyADay"></h1>
+                <h1 id="cupsOfCoffee"></h1>
+              <!--© -->
+                <h2>What I need to put a side every month:</h2><br><h1>X</h1><br>
+                <h2>which is ___ a day or __ cups of coffee</h2><br>
+
+        </div>
+        
+        
+
+   <!--<center> <button class="btn btn-default" id="calc" onclick="buttonB()">Calculate</button>
+    </center>--></div>
+    
+    </div>
+   
     <div class="page2 container">
     
     <h1 class="text-center">Dream Calculator</h1>
     <div class="row">
-        <div class="col-md-3"> <h3>Current Age: </h3><input class="form-control" id="age"></div>
-        <div class="col-md-3"><h3>Retirement Age: </h3><input class="form-control" id="Rage"></div>
-        <div class="col-md-3"><h3>Monthly Investment:</h3><input class="form-control" id="MonthlyInvestment"></div>
-        <div class="col-md-3"> <h3>Target Net Worth: </h3><input class="form-control" id="TargetNetWorth"></div>
+        <div class="col-md-4"><h3>Time frame (in years): </h3><input class="form-control" id="Rage" placeholder="50"></div>
+        <div class="col-md-4"><h3>Monthly Investment:</h3><input class="form-control" id="MonthlyInvestment"></div>
+        <div class="col-md-4"> <h3>Target Net Worth: </h3><input class="form-control" id="TargetNetWorth" placeholder="100,000"></div>
     </div>
 
 <div class="row">
@@ -73,105 +126,7 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
    <center> <button class="btn btn-default" id="calc" onclick="buttonA()">Calculate</button>
     </center></div>
     
-
-    <div class="one container">
-        <div class="row">
-            <div class="col-md-6"><img class="ad" src="img/1.jpg"></div>
-            <div class="col-md-6">  <p>Sam Choi</p>
-        <blockquote><p>"With Con Cap I was able to pursue my dreams to become a photographer because I was able to retire at 42"</p></blockquote>
-        </div>
-        </div>
-        <br><center> <h6>Loading...</h6></center>
-    </div>
-    
-    <div class="two container">
-        <div class="row">
-            <div class="col-md-6"><img class="ad" src="img/2.jpg"></div>
-            <div class="col-md-6">  <p>Michael Akolisa</p>
-       
-        <blockquote><p>"VJ set me on a track so that I could support my kids and wife while getting my degree"</p></blockquote>
-        </div>
-        </div>
-        <br><center> <h6>Loading...</h6></center>
-    </div>
-
-      
-    
-    <div id="graphBack" class="page4 container">
-        <div>
-        <canvas id="myChart" width="200" height="90"></canvas>
-        </div>
-        <br>
-       <!-- <button class="btn btn-default" id="calc" onclick="back()">Return</button> -->
-
-    </div>
-
-        <div class="page4 container">
-    
-    
-    <div class="">
-    
-    <h1 class="text-center">Dream Calculator</h1>
-    <div class="row">
-        <div class="col-md-3"> <h3>Current Age: </h3><input class="form-control" id="age"></div>
-        <div class="col-md-3"><h3>Retirement Age: </h3><input class="form-control" id="Rage"></div>
-        <div class="col-md-3"><h3>Monthly Investment:</h3><input class="form-control" id="MonthlyInvestment"></div>
-        <div class="col-md-3"> <h3>Target Net Worth: </h3><input class="form-control" id="TargetNetWorth"></div>
-    </div>
-
-<div class="row">
-    
-    <div class="col-md-6">    
-        <form action="">
-        <br><h3>Risk:</h3>
-            <br>
-        <input type="radio" name="risk" value="0.04"> <span>Low</span><br>
-        <input type="radio" name="risk" value="0.06"> <span>Medium</span><br>
-        <input type="radio" name="risk" value="0.08"> <span>High</span>
-    </form></div>
-    <div class="col-md-6">
-    <form action="">
-        <br><h3>Pick a goal:</h3>
-        <div class="row">
-          <label>
-             <input type="radio" name="goal" value="1">
-            <img class="goal" src="img/goal1.jpg">
-          </label>
-
-          <label>
-            <input type="radio" name="goal" value="2">
-            <img class="goal" src="img/goal2.jpg">
-          </label>
-
-          <label>
-            <input type="radio" name="goal" value="3">
-            <img class="goal" src="img/goal3.jpg">
-          </label>
-  <style>
-label > input{ 
-  visibility: hidden;
-  position: absolute; 
-}
-label > input + img{ /* IMAGE STYLES */
-  cursor:pointer;
-  border:2px solid transparent;
-}
-label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
-  border:2px solid white;
-}
-            </style>
-
-        </div>
-    </form>   </div>
-     
-        
-</div>    
-
-        
-   <center> <button class="btn btn-default" id="calc" onclick="buttonB()">Calculate</button>
-    </center></div>
-    </div>
-    
+ 
     
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="js/Chart.min.js"></script>
@@ -179,7 +134,9 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
     <script src="js/main.js"></script>
     <script src="js/particles.min.js"></script>
     <script src="js/particles-dot.js"></script>
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js "></script>
+    <script src="js/countUp.js "></script>
+    <script src="js/init.min.js"></script>
     
 </body>
 </html>
