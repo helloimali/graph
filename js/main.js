@@ -148,7 +148,7 @@ function calc() {
     
     var axisX = [];
 
-    for( i = age; i <= maxAge; i++){
+    for( i = age; i <= maxAge-1; i++){
         axisX.push(parseInt(i));
         
     }
