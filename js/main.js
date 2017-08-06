@@ -264,3 +264,46 @@ function buttonB(){
     myChart.update();
 }
 
+function monthlyInvest(){
+    //A = P(1 + r/n)^nt
+    /*
+    A = total $
+    P = Money we initially invest with
+    R = Rate (0.8 for high, etc.)
+    N = amount of times it's compunded (1?)
+    T = Time in years (1 being one year, 1/2 being half a year) 
+    */
+    var time = (1/12); //1 month
+    var risky = 0.08;
+    var total = 0;
+    var monthly = [];
+    monthly[0] = 0;
+    console.log(total);
+    
+    for(var i=1; i<13;i++){
+        console.log(i);
+        
+        monthly[i] = (3600/(Math.pow(1+risky,i/12)));
+        total += monthly[i] - monthly[i-1];
+        console.log("Month: " + i +" is: " + total);
+    }
+    
+    
+    monthly[1];
+    monthly[2];
+    monthly[3];
+    monthly[4];
+    monthly[5];
+    monthly[6];
+    monthly[7];
+    monthly[8];
+    monthly[9];
+    monthly[10];
+    monthly[11];
+    monthly[12];
+    
+    
+    console.log(total.toFixed(3));
+
+    
+}
